@@ -109,8 +109,8 @@ void arena_free(Arena* arena) {
 
     ArenaRegion* region = arena->start;
     while (region) {
-        region = region->next;
         ArenaRegion* tmp = region;
+        region = region->next;
 
         free_with(&arena->inner, tmp->buf);
         free_with(&arena->inner, tmp);
