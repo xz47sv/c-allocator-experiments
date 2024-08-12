@@ -11,8 +11,7 @@ DESTDIR =
 ZIG = zig
 AR = ${ZIG} ar
 CC = ${ZIG} cc
-CFLAGS_RELEASE = \
-	-O3 -g0 -Werror -Wno-error=strict-prototypes -Wno-error=unused-variable
+CFLAGS_RELEASE = -O3 -g0 -Werror
 # NOTE: -fsanitize=address doesn't work with zig cc yet, add later
 CFLAGS_DEBUG = -O0 -ggdb -g3 -DDEBUG -fno-omit-frame-pointer
 CFLAGS = -Wall -Wextra -std=gnu18 -Isrc
